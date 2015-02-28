@@ -1,0 +1,19 @@
+<ion-view hide-back-button="true" title="Dribbble">
+<ion-content padding="true">
+<h1>Popular Shots</h1>
+<div class="list card" ng-repeat="image in imageList">
+	<div class="item item-avatar">
+		<img ng-src="{{image.player.avatar_url}}">
+		<h2>{{image.player.name}}</h2>
+		<p>{{image.player.location}}</p>
+	</div>
+	<div class="item item-image">
+		<img ng-src="{{image.image_url}}">
+	</div>
+	<a class="item item-icon-left assertive" ng-href="{{image.url}}">
+		<i class="icon ion-social-dribbble-outline"></i>
+		View Original Shot
+	</a>
+</div>
+</ion-content>
+</ion-view>
